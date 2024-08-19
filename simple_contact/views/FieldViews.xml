@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="view_simple_contact_form" model="ir.ui.view">
+            <field name="name">simple_contact.form</field>
+            <field name="model">simple_contact.simple_contact</field>
+            <field name="arch" type="xml">
+                <form string="Contact">
+                    <sheet>
+                        <group>
+                            <field name="StudentName"/>
+                            <field name="MarkObtained"/>
+                            <field name="Grade" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
