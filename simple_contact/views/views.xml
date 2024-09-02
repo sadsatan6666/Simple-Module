@@ -1,0 +1,50 @@
+<odoo>
+<data>
+
+<!-- Action Window Definition, for simple_contact(student) -->
+        <record model="ir.actions.act_window" id="simple_contact_action_windows">
+            <field name="name">SimpleContact windows</field>
+            <field name="res_model">simple_contact.test_name</field>
+            <field name="view_mode">tree,form</field>
+            
+        </record>
+           
+   
+        <!-- Tree View Definition -->
+        <!-- THIS RECORD IS SEEN WHEN I CLICK ON THE MODULE ()) -->
+        <record id="view_simple_contact_tree" model="ir.ui.view">
+            <field name="name">simple_contact.treee</field>
+            <field name="model">simple_contact.test_name</field>
+            <field name="arch" type="xml">
+                <tree string="Simple Contact">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Form View Definition -->
+        <record id="view_simple_contact_form" model="ir.ui.view">
+            <field name="name">simple_contact.forms</field>
+            <field name="model">simple_contact.test_name</field>
+            <field name="arch" type="xml">
+                <form string="Simple Contacts">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Menu Items -->
+        <menuitem name="SimpleContacts" id="simple_contact_menu_roots"/>
+        <menuitem name="Menu 777" id="simple_contact_menu_1s" parent="simple_contact_menu_roots"/>
+        <menuitem name="List 777" id="simple_contact_menu_1_list" parent="simple_contact_menu_1s" action="simple_contact_action_windows"/>
+ 
+    
+</data>
+</odoo>
+
